@@ -356,6 +356,27 @@ section.content:nth-of-type(even) {
     color: #00c8d6;
 }
 
+/* ==== FOOTER ==== */
+.footer {
+    background: rgba(8, 27, 41, 0.95);
+    color: #ededed;
+    text-align: center;
+    padding: 20px 10%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.footer span {
+    color: #00abf0; /* Accent color */
+    font-weight: 600;
+}
+
+.footer strong {
+    color: #00abf0;
+}
+
+
 /* ==== KEYFRAME ANIMATIONS ==== */
 @keyframes slideRight {
     0% { transform: translateX(-100px); opacity: 0; }
@@ -463,4 +484,11 @@ section.content:nth-of-type(even) {
     .menu-toggle.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+
+    .footer span:hover, 
+    .footer strong:hover {
+        color: #33cfff;
+        transition: color 0.3s ease;
+    }
+
 }
