@@ -135,6 +135,7 @@ body {
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.3s;
+   
 }
 
 .home-sci {
@@ -233,6 +234,8 @@ section.content:nth-of-type(even) {
     font-size: 18px;
     line-height: 1.6;
     color: #ccc;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
 /* ==== PROJECTS SECTION ==== */
@@ -260,6 +263,7 @@ section.content:nth-of-type(even) {
     color: #ddd;
     font-size: 18px;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 /* ==== SKILLS SECTION ==== */
