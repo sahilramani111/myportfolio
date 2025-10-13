@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahil Ramani | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <a href="#home" class="logo">Portfolio.</a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a>
+            <a href="#projects" style="--i:4">Projects</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+         <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+    <!-- ===== HOME ===== -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Sahil Ramani</h1>
+            <h3>And I'm a <span class="text"></span></h3>
+            <p>
+                I'm a Flutter App Developer with over 10 months of experience.<br />
+                I specialize in building responsive UIs, Firebase integration, and API connectivity.
+            </p>
+
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/sahil-ramani-26b305251/" style="--i:7" target="_blank" rel="noopener">
+                    <img src="linkedin-square.png" alt="LinkedIn Profile" />
+                </a>
+                <a href="https://github.com/sahilramani111" style="--i:8" target="_blank" rel="noopener">
+                    <img src="github.png" alt="GitHub Profile" />
+                </a>
+                <a href="https://wa.me/919726364826?text=Hello%20Sahil" style="--i:9" target="_blank" rel="noopener">
+                    <img src="whatsapp.png" alt="WhatsApp Chat" />
+                </a>
+            </div>
+
+            <a href="#about" class="btn-box">More About Me</a>
+        </div>
+
+        <div class="home-img">
+            <img src="about.jpg" alt="Sahil Ramani Portrait"/>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="content about" id="about">
+        <div class="about-img">
+            <img src="about.jpg" alt="About Sahil Ramani" />
+        </div>
+        <div class="about-text">
+            <h2>Who Am I?</h2>
+            <p>
+                I'm <strong>Sahil Ramani</strong>, a passionate Flutter developer working at
+                <b>MDIDM Infoway</b>. I specialize in creating smooth, user-friendly mobile and web
+                apps using Flutter and Firebase. My focus is on responsive design, clean code, and
+                seamless integration of backend services.
+            </p>
+        </div>
+    </section>
+
+   
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="content projects" id="projects">
+        <div class="project">
+            <h2>Cocktail Finder App</h2>
+            <p>
+                A Flutter app to browse and discover cocktails using a public API. Built with clean
+                UI and search functionality. Features include ingredient search, favorite cocktails,
+                and responsive layouts for both mobile and tablet.
+            </p>
+        </div>
+
+        <div class="project">
+            <h2>Detroja App</h2>
+            <p>
+                A community-based Flutter app where users can connect, share, and engage with local
+                communities. Features include chat, events, community posts, and push notifications
+                for active engagement.
+            </p>
+      
+        </div>
+
+        <div class="project">
+            <h2>Begpoint</h2>
+            <p>
+                An e-commerce Flutter app designed to provide a seamless shopping experience.
+                Features include product listings, cart management, payment integration, and user-friendly
+                checkout flows.
+            </p>
+           
+        </div>
+
+        <div class="project">
+            <h2>Blockpuzzle Game</h2>
+            <p>
+                A classic block puzzle game made in Flutter. Offers smooth drag-and-drop mechanics,
+                scoring system, and visually appealing UI for a fun gaming experience. Designed to
+                work across mobile and tablet devices.
+            </p>
+        </div>
+    </section>
+
+     <!-- ===== SKILLS ===== -->
+    <section class="content skills" id="skills">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+            <li>Flutter & Dart</li>
+            <li>Firebase</li>
+            <li>REST API Integration</li>
+            <li>UI/UX Design</li>
+            <li>Git & GitHub</li>
+            <li>Android Studio</li>
+        </ul>
+    </section>
+
+    <!-- ===== COMMENT SECTION ===== -->
+    <section class="content comment" id="comments">
+        <h2>Leave a Comment</h2>
+        <form class="comment-form" id="commentForm">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="commentsContainer"></div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="content contact" id="contact">
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:sahilramani833@gmail.com">sahilramani833@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919726364826">+91 97263 64826</a></p>
+        <p>GitHub: <a href="https://github.com/sahilramani111" target="_blank" rel="noopener">@sahilramani111</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sahil-ramani-26b305251/" target="_blank" rel="noopener">linkedin.com/in/sahilramani</a></p>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
