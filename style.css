@@ -466,12 +466,12 @@ section.content:nth-of-type(even) {
     }
 
     .skills h2 {
-        margin-bottom: 15px; /* reduce gap between heading and list */
+        margin-bottom: 10px; /* reduce gap between heading and list */
         font-size: 1.5rem;
     }
 
     .skills-list { 
-        gap: 8px; /* reduce spacing between skill items */
+        gap: 6px; /* reduce spacing between skill items */
         justify-content: center;
     }
     .skills-list li { 
@@ -479,6 +479,6 @@ section.content:nth-of-type(even) {
         font-size: 14px; 
     }
 
-    section.content { padding: 60px 3%; }
+    section.content { padding: 100px 10%; }
 }
 
