@@ -460,12 +460,24 @@ section.content:nth-of-type(even) {
     .home-content p { font-size: 0.95rem; }
     .home-img img { width: 180px; height: 180px; }
     
-     .skills {
-        padding: 50px 5% 40px; /* reduce top/bottom spacing */
+    /* Reduce skills section spacing */
+    .skills {
+        padding: 40px 5% 20px; /* smaller top/bottom padding */
     }
 
-    .skills-list { gap: 8px; }
-    .skills-list li { padding: 8px 12px; font-size: 14px; }
+    .skills h2 {
+        margin-bottom: 15px; /* reduce gap between heading and list */
+        font-size: 1.5rem;
+    }
+
+    .skills-list { 
+        gap: 8px; /* reduce spacing between skill items */
+        justify-content: center;
+    }
+    .skills-list li { 
+        padding: 10px 12px; 
+        font-size: 14px; 
+    }
 
     section.content { padding: 60px 3%; }
 }
