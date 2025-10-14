@@ -80,17 +80,21 @@ body {
 .home {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* allows expansion if text is long */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 70px 10%;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
     gap: 50px;
+    padding: 120px 10% 80px; /* top padding for header space */
+    box-sizing: border-box;
 }
 
 .home-content {
     max-width: 600px;
     flex: 1;
+    text-align: center;
 }
 
 .home-img img {
@@ -117,12 +121,13 @@ body {
 }
 
 .home-content h1 {
-    font-size: 56px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     margin: 10px 0;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: 1s;
+    line-height: 1.2;
 }
 
 .home-content h3 span {
@@ -130,12 +135,11 @@ body {
 }
 
 .home-content p {
-    font-size: 18px;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     line-height: 1.6;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1.3s;
-   
 }
 
 .home-sci {
@@ -267,6 +271,7 @@ section.content:nth-of-type(even) {
 }
 
 /* ==== SKILLS SECTION ==== */
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -372,7 +377,7 @@ section.content:nth-of-type(even) {
 }
 
 .footer span {
-    color: #00abf0; /* Accent color */
+    color: #00abf0;
     font-weight: 600;
 }
 
@@ -380,85 +385,55 @@ section.content:nth-of-type(even) {
     color: #00abf0;
 }
 
-
-/* ==== KEYFRAME ANIMATIONS ==== */
+/* ==== KEYFRAMES ==== */
 @keyframes slideRight {
     0% { transform: translateX(-100px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 @keyframes slideLeft {
     0% { transform: translateX(100px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
-
 @keyframes slideTop {
     0% { transform: translateY(100px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
-
 @keyframes slideBottom {
     0% { transform: translateY(-100px); opacity: 0; }
     100% { transform: translateY(0); opacity: 1; }
 }
-
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(50px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ==== RESPONSIVE ==== */
-@media (max-width: 768px) {
 
+/* Tablets */
+@media (max-width: 1024px) {
+    .home-content h1 { font-size: 2.8rem; }
+    .home-img img { width: 260px; height: auto; }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
     .home {
         flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        justify-content: center;
+        padding: 120px 5% 60px;
+        min-height: auto;
     }
+    .home-content h1 { font-size: 2rem; }
+    .home-content h3 { font-size: 1.2rem; }
+    .home-content p { font-size: 1rem; }
+    .home-img img { width: 220px; height: auto; margin-top: 20px; }
 
-    .home-content {
-        max-width: 100%;
-    }
+    .skills-list { gap: 12px; }
+    .skills-list li { padding: 14px; font-size: 16px; }
 
-    .home-img img {
-        width: 250px;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .home-content h1 {
-        font-size: 40px;
-    }
-
-    .navbar a {
-        font-size: 16px;
-        margin-left: 0;
-    }
-
-    section.content {
-        padding: 80px 5%;
-    }
-
-    .project {
-        width: 90%;
-    }
-
-    .about-img img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .skills-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* ==== MOBILE MENU ==== */
-    .menu-toggle {
-        display: flex;
-    }
-
+    .menu-toggle { display: flex; }
     .navbar {
         display: none;
         flex-direction: column;
@@ -472,101 +447,26 @@ section.content:nth-of-type(even) {
         z-index: 99;
         box-shadow: 0 0 10px rgba(0,238,255,0.2);
     }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .menu-toggle.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.open span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .footer span:hover, 
-    .footer strong:hover {
-        color: #33cfff;
-        transition: color 0.3s ease;
-    }
-}
-
-/* Large tablets / small laptops */
-@media (max-width: 1024px) {
-    .home-content h1 {
-        font-size: 48px;
-    }
-    .home-img img {
-        width: 280px;
-        height: auto;
-    }
-}
-
-/* Tablets / larger phones */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column-reverse;
-        text-align: center;
-        justify-content: center;
-        padding: 50px 5%;
-    }
-
-    .home-content h1 {
-        font-size: 36px;
-    }
-
-    .home-img img {
-        width: 220px;
-        height: auto;
-    }
-
-    .navbar a {
-        font-size: 16px;
-        margin-left: 0;
-    }
-
-    .project {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .about-img img {
-        width: 220px;
-        height: 220px;
-    }
+    .navbar.active { display: flex; }
+    .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.open span:nth-child(2) { opacity: 0; }
+    .menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
-    .home-content h1 {
-        font-size: 28px;
+    .home-content h1 { font-size: 1.8rem; }
+    .home-content h3 { font-size: 1rem; }
+    .home-content p { font-size: 0.95rem; }
+    .home-img img { width: 180px; height: 180px; }
+    
+     .skills {
+        padding: 50px 5% 40px; /* reduce top/bottom spacing */
     }
 
-    .home-content h3 {
-        font-size: 20px;
-    }
+    .skills-list { gap: 8px; }
+    .skills-list li { padding: 8px 12px; font-size: 14px; }
 
-    .home-img img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .skills-list li {
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    .project {
-        padding: 20px;
-    }
-
-    section.content {
-        padding: 60px 3%;
-    }
+    section.content { padding: 60px 3%; }
 }
 
