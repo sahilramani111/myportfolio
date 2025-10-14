@@ -1,6 +1,6 @@
 // ===== TYPING ANIMATION =====
 var typed = new Typed(".text", {
-    strings: ["Flutter Developer", "Mobile App Developer", "UI Designer"],
+    strings: ["Flutter Developer", "Mobile App Developer"],
     typeSpeed: 80,
     backSpeed: 40,
     backDelay: 1000,
@@ -42,3 +42,5 @@ menuToggle.addEventListener('click', () => {
      // Animate hamburger into cross
     menuToggle.classList.toggle('open');
 });
+
+
